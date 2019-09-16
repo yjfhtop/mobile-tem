@@ -1,2 +1,1 @@
-# mobile-clinic
-COS 移动端网上门店
+##移动端模板
