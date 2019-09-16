@@ -1,0 +1,52 @@
+//如果修改本文件，请修改 ./variables.js 文件
+
+/* 主颜色 */
+@colorMain: #1da6be;
+
+/* 功能颜色 */
+@colorSuccess: #67c23a;  // 成功
+@colorWarning: #f5ad40;  // 警告
+@colorDanger: #f44d4d;  // 危险
+@colorInfo: #909399;  // 信息
+
+/* 字体颜色 */
+@colorTextPrimary: #303133;  // 主要文字
+@colorTextRegular: #606266;  // 常规文字
+@colorTextSecondary: #909399;  // 次要文字
+@colorTextPlaceHolder: #c0c4cc;  // 占位文字
+@colorTextLink: #169bd5;  // 文字链接
+
+@colorTextLinkHover: #1989fa;  // 文字链接，鼠标移动效果
+
+/* 边框颜色 */
+@colorBorderBase: #dcdfe6;  // 一级边框
+@colorBorderLight: #e4e7ed;  // 二级边框
+@colorBorderLighter: #ebeef5;  // 三级边框
+@colorBorderExtralight: #f2f6fc;  // 四级边框
+@colorBorderElementBase: #DCDFE6; // 饿了么边框颜色
+/* 背景颜色 */
+@colorBgBase: #f0f2f5;  // 主背景色，用于 App 主内容的底色
+@colorBgLight: #f4f4f9;  // 次要背景色，可用于文字底色
+@colorBgThem: #84ccc9; // 主题色的背景色
+@colorBgTable: #F6F6F6; // 表头背景色
+
+/* 字体尺寸 这里是尺寸是指在750px下的字体大小*/
+@fontSizeBase: .28rem;  // 基础字体大小
+@fontSizeMedium: .32rem;  // 中等字体大小
+@fontSizeLarge: .36rem;  // 大号字体大小
+@fontSizeExtraLarge: .40rem;  // 特大号字体大小
+@fontSizeSmall: .26rem;  // 小号字体大小
+@fontSizeExtraSmall: .24rem;  // 特小号字体大小
+
+
+// 新增的全局样式变量，请写在 :export 内容上面
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass,
+// 这里是导出的变量， 在js中使用
+:export {
+    colorMain: @colorMain;
+    colorSuccess: @colorSuccess;
+    colorWarning: @colorWarning;
+    colorDanger: @colorDanger;
+    colorInfo: @colorInfo;
+}
