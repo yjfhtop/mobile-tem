@@ -67,23 +67,23 @@ export default {
 <style scoped lang="less">
     .item-container {
         .user-icon {
-            width: .8rem;
-            height: .8rem;
+            width: 40px;
+            height: 40px;
             img {
                 width: 100%;
                 height: 100%;
             }
         }
         .user-info-and-message {
-            margin-top: .2rem;
+            margin-top: 10px;
             img {
-                max-width: 1rem;
+                max-width: 50px;
             }
             .message {
-                margin-top: .1rem;
+                margin-top: 5px;
                 border: 1px solid @colorBorderLight;
-                border-radius: .1rem;
-                padding: .1rem;
+                border-radius: 5px;
+                padding: 5px;
             }
         }
     }
