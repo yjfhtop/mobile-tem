@@ -6,7 +6,7 @@ function resolve(dir) {
     return path.join(__dirname, dir)
 }
 
-const name = '美安健康' // page title
+const name = '数据统计' // page title
 // If your port is set to 80,
 // use administrator privileges to execute the command line.
 // For example, Mac: sudo npm run
@@ -48,7 +48,6 @@ module.exports = {
             }
         }
     },
-
     configureWebpack: {
         // provide the app's title in webpack's name field, so that
         // it can be accessed in index.html to inject the correct title.
@@ -59,7 +58,29 @@ module.exports = {
             }
         }
     },
-
+    chainWebpack: config => {
+        const svgRule = config.module.rule('svg')
+        // 清除已有的所有 loader。
+        // 如果你不这样做，接下来的 loader 会附加在该规则现有的 loader 之后。
+        svgRule.uses.clear()
+        svgRule
+            .test(/\.svg$/)
+            .include.add(path.resolve(__dirname, './src/icons'))
+            .end()
+            .use('svg-sprite-loader')
+            .loader('svg-sprite-loader')
+            .options({
+                symbolId: 'icon-[name]'
+            })
+        const fileRule = config.module.rule('file')
+        fileRule.uses.clear()
+        fileRule
+            .test(/\.svg$/)
+            .exclude.add(path.resolve(__dirname, './src/icons'))
+            .end()
+            .use('file-loader')
+            .loader('file-loader')
+    },
     // 在vue scss中使用全局
     pluginOptions: {
         'style-resources-loader': {

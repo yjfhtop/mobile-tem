@@ -1,6 +1,6 @@
 import request from '@/utils/request'
 
-// 预约列表
+// 登录
 export function login(data) {
     return request({
         url: '',

@@ -2,6 +2,10 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+
+// icon 全局导入
+import '@/icons' // icon
+
 // 样式全局导入， 组件局部导入
 import './style/index.less'
 import './permission'

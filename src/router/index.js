@@ -26,7 +26,7 @@ export default new Router({
             component: () => import('@/views/error/404')
         },
         {
-            path: '/account/login',
+            path: '/login',
             meta: {
                 title: '欢迎登录'
             },
@@ -34,30 +34,6 @@ export default new Router({
             component: () => import('@/views/account/login')
         },
         // 注意，所有路由必须为本路由的子路由
-        {
-            path: '/:routeParameter',
-            name: 'Clinic',
-            component: Layout,
-            redirect: { name: 'ClinicHome' },
-            children: [
-                {
-                    path: 'index',
-                    meta: {
-                        title: '主页'
-                    },
-                    name: 'ClinicHome',
-                    component: () => import('@/views/clinicHome')
-                }
-            ]
-        },
-        {
-            path: '/:routeparameter/commodity/product',
-            name: 'Product',
-            meta: {
-                title: '产品详情'
-            },
-            component: () => import('@/views/commodity/product')
-        },
         {
             path: '*',
             redirect: '/error/404'
