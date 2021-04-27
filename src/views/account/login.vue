@@ -4,23 +4,21 @@
             <div class="logo-c">
                 <img class="logo-img" src="/logo.png" alt="">
                 <div class="info-c">
-
+                    <img src="/login/welcome-login.png" alt="">
                 </div>
             </div>
         </div>
 
         <div class="form-c">
-            <Button size="large">11</Button>
+
         </div>
     </div>
 </template>
 
 <script>
-import { Button } from 'vant'
 export default {
     name: 'Login',
     components: {
-        Button
     },
     data: function() {
         return {}
@@ -53,6 +51,9 @@ export default {
                 }
                 .info-c {
                     margin-top: 20px;
+                    img {
+                        width: 140px;
+                    }
                 }
             }
         }

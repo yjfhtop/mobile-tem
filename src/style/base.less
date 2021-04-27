@@ -8,6 +8,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     line-height: 1;
     font-size: @fontSizeBase;
+    color: @colorTextRegular;
 }
 
 code {
@@ -38,8 +39,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
-body {
-}
+
 ol, ul {
     list-style: none;
 }
@@ -56,27 +56,6 @@ table {
     border-spacing: 0;
 }
 
-.clearfix {
-    &:after {
-        visibility: hidden;
-        display: block;
-        font-size: 0;
-        content: " ";
-        clear: both;
-        height: 0;
-    }
+*{
+    box-sizing: border-box;
 }
-.fl {
-    float: left;
-}
-.fr {
-    float: right;
-}
-
-.fl {
-    float: left;
-}
-.fr {
-    float: right;
-}
-
