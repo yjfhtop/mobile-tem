@@ -4,12 +4,12 @@
 </template>
 
 <script>
-export default {
-    name: 'ChatContainer',
-    data: function() {
-        return {}
+    export default {
+        name: 'ChatContainer',
+        data: function() {
+            return {}
+        }
     }
-}
 </script>
 
 <style scoped lang="less">

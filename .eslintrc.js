@@ -7,21 +7,47 @@ module.exports = {
         'plugin:vue/essential',
         'eslint:recommended'
     ],
+    // 覆盖 vue/script-indent 配置后，  indent导致的误差
+    overrides: [
+        {
+            'files': ['*.vue'],
+            'rules': {
+                'indent': 'off'
+            }
+        }
+    ],
     rules: {
         'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
         'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+
+
+        // @fixable 一个缩进必须用四个空格替代
+        'indent': [2, 4, {
+            'SwitchCase': 1
+        }],
+        'vue/script-indent': ['error', 4, {
+            'baseIndent': 1,
+            'switchCase': 0,
+            'ignores': []
+        }],
+        'vue/html-indent': ['error', 4, {
+            'baseIndent': 1,
+            'switchCase': 0,
+            'ignores': []
+        }],
+        'vue/max-attributes-per-line': [2, {
+            'singleline': 10,
+            'multiline': {
+                'max': 1,
+                'allowFirstLine': false
+            }
+        }],
+
+
         "function-call-argument-newline": "always",
-        "vue/html-indent": ["error", 4],
         "vue/html-closing-bracket-newline": ["error", {
             "singleline": "never",
             "multiline": "never"
-        }],
-        "vue/max-attributes-per-line": [2, {
-            "singleline": 10,
-            "multiline": {
-                "max": 1,
-                "allowFirstLine": false
-            }
         }],
         "vue/singleline-html-element-content-newline": "off",
         "vue/multiline-html-element-content-newline": "off",
@@ -59,9 +85,6 @@ module.exports = {
             'after': true
         }],
         'handle-callback-err': [2, '^(err|error)$'],
-        'indent': [2, 4, {
-            'SwitchCase': 1
-        }],
         'jsx-quotes': [2, 'prefer-single'],
         'key-spacing': [2, {
             'beforeColon': false,
@@ -78,7 +101,6 @@ module.exports = {
         'new-parens': 2,
         'no-array-constructor': 2,
         'no-caller': 2,
-        'no-console': 'off',
         'no-class-assign': 2,
         'no-cond-assign': 2,
         'no-const-assign': 2,
@@ -193,7 +215,6 @@ module.exports = {
         'yield-star-spacing': [2, 'both'],
         'yoda': [2, 'never'],
         'prefer-const': 2,
-        'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
         'object-curly-spacing': [2, 'always', {
             objectsInObjects: false
         }],

@@ -10,28 +10,34 @@
         </div>
 
         <div class="form-c">
-
+            <FormInput v-model=""></FormInput>
         </div>
     </div>
 </template>
 
 <script>
-export default {
-    name: 'Login',
-    components: {
-    },
-    data: function() {
-        return {}
-    },
-    mounted() {
+    import FormInput from '@/components/FormInput'
+    export default {
+        name: 'Login',
+        components: {
+            FormInput
+        },
+        data: function() {
+            return {
+                formData: {
+                }
+            }
+        },
+        mounted() {
+        }
     }
-}
 </script>
 
 <style scoped lang="less">
     .login-page {
         /*background-color: #ccc;*/
         min-height: 100vh;
+
         .top-header {
             position: relative;
 
@@ -46,11 +52,14 @@ export default {
                 top: 65px;
                 left: 50%;
                 transform: translateX(-50%);
+
                 .logo-img {
                     width: 60px;
                 }
+
                 .info-c {
                     margin-top: 20px;
+
                     img {
                         width: 140px;
                     }

@@ -5,12 +5,12 @@
 </template>
 
 <script>
-export default {
-    name: '404',
-    data: function() {
-        return {}
+    export default {
+        name: '404',
+        data: function() {
+            return {}
+        }
     }
-}
 </script>
 
 <style scoped lang="less">

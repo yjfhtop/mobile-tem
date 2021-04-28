@@ -26,20 +26,20 @@
 </template>
 
 <script>
-import { httpFileIsImg } from '@/utils'
-import Vue from 'vue'
-import { ImagePreview } from 'vant'
+    import { httpFileIsImg } from '@/utils'
+    import Vue from 'vue'
+    import { ImagePreview } from 'vant'
 
-Vue.use(ImagePreview)
-export default {
-    name: 'ChatItem',
-    data: function() {
-        return {}
-    },
-    props: {
-        messageData: {
-            type: Object,
-            required: true
+    Vue.use(ImagePreview)
+    export default {
+        name: 'ChatItem',
+        data: function() {
+            return {}
+        },
+        props: {
+            messageData: {
+                type: Object,
+                required: true
             /* 格式: {
                 id: 1,
                 user: {
@@ -51,17 +51,17 @@ export default {
                 isOwn: true,
                 sendTime: '2018-10-01 15:30:52'
             }*/
-        }
-    },
-    methods: {
-        httpFileIsImg,
-        lookImg(src) {
-            ImagePreview([
-                src
-            ])
+            }
+        },
+        methods: {
+            httpFileIsImg,
+            lookImg(src) {
+                ImagePreview([
+                    src
+                ])
+            }
         }
     }
-}
 </script>
 
 <style scoped lang="less">
