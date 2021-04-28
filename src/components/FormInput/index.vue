@@ -45,6 +45,10 @@
 
 <style scoped lang="less">
     .form-input {
+        margin-top: 20px;
+        &:first-child {
+            margin-top: 0;
+        }
         .label {
             font-size: @fontSizeLarge;
             font-weight: bold;
